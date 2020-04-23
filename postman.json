@@ -11,7 +11,39 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Fulano\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users"
+					]
 				}
 			},
 			"response": []
@@ -33,18 +65,39 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/todos",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"todos"
+					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Create new todo",
+			"name": "Create a new todo",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"task\": \"Descrição da tarefa\",\n\t\"user_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/todos",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"todos"
+					]
 				}
 			},
 			"response": []
@@ -55,7 +108,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/todos/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"todos",
+						"1"
+					]
 				}
 			},
 			"response": []
@@ -63,10 +123,26 @@
 		{
 			"name": "Update a todo",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"task\": \"Nova descrição\",\n\t\"user_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/todos/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"todos",
+						"1"
+					]
 				}
 			},
 			"response": []
