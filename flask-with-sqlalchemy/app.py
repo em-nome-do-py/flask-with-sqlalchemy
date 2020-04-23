@@ -14,6 +14,15 @@ def get_users():
     ]), 200
 
 
+@app.route('/users', methods=['POST'])
+def create_user():
+    """ Retorna a lista de usuários """
+    return jsonify({
+        'id': 1, 
+        'name': 'Usuário 1'
+    }), 201
+
+
 @app.route('/users/<id>/todos')
 def get_user_todos(id):
     """ Retorna as tarefas do usuário """
