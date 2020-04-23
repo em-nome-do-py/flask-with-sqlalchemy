@@ -8,6 +8,7 @@ authors = ["Anderson Carlos Woss <anderson.woss@madeiramadeira.com.br>"]
 python = "^3.6"
 flask = "^1.1.2"
 gunicorn = "^20.0.4"
+flask-sqlalchemy = "^2.4.1"
 
 [tool.poetry.dev-dependencies]
 
