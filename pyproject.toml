@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flask-with-sqlalchemy"
+name = "flask_with_sqlalchemy"
 version = "0.1.0"
 description = ""
 authors = ["Anderson Carlos Woss <anderson.woss@madeiramadeira.com.br>"]
@@ -11,6 +11,8 @@ gunicorn = "^20.0.4"
 flask-sqlalchemy = "^2.4.1"
 
 [tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+cerberus = "^1.3.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
