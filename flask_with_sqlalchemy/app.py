@@ -3,7 +3,7 @@ from .models import database, User, Todo
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../database.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 database.init_app(app)
@@ -29,7 +29,7 @@ def create_user():
     database.session.add(user)
     database.session.commit()
 
-    return jsonify(user.to_dict()), 200
+    return jsonify(user.to_dict()), 201
 
 
 @app.route('/users/<id>/todos')
